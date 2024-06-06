@@ -691,9 +691,9 @@
     #define DEFAULT_Ki_LIST {   1.14,   1.14 }
     #define DEFAULT_Kd_LIST {  46.57,  46.57 }
   #else
-    #define DEFAULT_Kp 12.45
-    #define DEFAULT_Ki 0.74
-    #define DEFAULT_Kd 52.25
+    #define DEFAULT_Kp 13.44
+    #define DEFAULT_Ki 0.86
+    #define DEFAULT_Kd 52.56
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -780,9 +780,9 @@
   //#define PID_BED_DEBUG // Print Bed PID debug data to the serial port.
 
   // Sidewinder X1
-  #define DEFAULT_bedKp 20.95
-  #define DEFAULT_bedKi 0.87
-  #define DEFAULT_bedKd 336.44
+  #define DEFAULT_bedKp 30.35
+  #define DEFAULT_bedKi 1.62
+  #define DEFAULT_bedKd 379.53
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -1233,7 +1233,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.121, 80.121, 399.778, 445 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.40, 80.10, 399.778, 445 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -2347,7 +2347,7 @@
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
 #if ENABLED(EEPROM_SETTINGS)
   //#define EEPROM_AUTO_INIT  // Init EEPROM automatically on any errors.
-  //#define EEPROM_INIT_NOW   // Init EEPROM on first boot after a new build.
+  #define EEPROM_INIT_NOW   // Init EEPROM on first boot after a new build.
 #endif
 
 // @section host
